@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rekam Rasa Studio — Video Produk UMKM</title>
+<meta name="description" content="Jasa editing video promosi produk untuk UMKM. Video pendek untuk TikTok, Reels, dan Shorts yang berhenti ditonton di 3 detik pertama.">
+<style>
+  :root{
+    --bg:#0d0f12; --card:#15181d; --line:#252a32;
+    --fg:#e9edf2; --muted:#98a2b3; --accent:#ff6b35; --accent2:#ffb703;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0;background:var(--bg);color:var(--fg);
+    font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:inherit}
+  .wrap{max-width:960px;margin:0 auto;padding:0 20px}
+  header{
+    position:sticky;top:0;z-index:10;background:rgba(13,15,18,.86);
+    backdrop-filter:blur(10px);border-bottom:1px solid var(--line);
+  }
+  nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 0}
+  .brand{font-weight:700;letter-spacing:.2px}
+  .brand span{color:var(--accent)}
+  nav ul{display:flex;gap:18px;list-style:none;margin:0;padding:0;font-size:14px;color:var(--muted)}
+  nav ul a{text-decoration:none}
+  nav ul a:hover{color:var(--fg)}
+  @media(max-width:640px){nav ul{display:none}}
+
+  section{padding:64px 0;border-bottom:1px solid var(--line)}
+  h1{font-size:clamp(28px,6vw,46px);line-height:1.15;margin:0 0 16px;letter-spacing:-.5px}
+  h2{font-size:clamp(20px,3.6vw,28px);margin:0 0 8px;letter-spacing:-.3px}
+  h3{font-size:18px;margin:0 0 8px}
+  p{margin:0 0 14px}
+  .lead{font-size:clamp(16px,2.4vw,19px);color:var(--muted);max-width:62ch}
+  .kicker{color:var(--accent);font-size:13px;font-weight:700;letter-spacing:1.4px;text-transform:uppercase;margin-bottom:12px}
+  .btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+  .btn{
+    display:inline-block;padding:13px 22px;border-radius:10px;text-decoration:none;
+    font-weight:600;font-size:15px;border:1px solid transparent;
+  }
+  .btn.primary{background:var(--accent);color:#12100e}
+  .btn.primary:hover{background:#ff7f52}
+  .btn.ghost{border-color:var(--line);color:var(--fg)}
+  .btn.ghost:hover{border-color:var(--muted)}
+
+  .grid{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));margin-top:28px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px}
+  .card .tag{display:inline-block;font-size:11px;letter-spacing:1px;text-transform:uppercase;color:var(--accent2);margin-bottom:10px}
+  .card p{color:var(--muted);font-size:15px;margin:0 0 10px}
+  .card p:last-child{margin-bottom:0}
+  .case .frame{
+    aspect-ratio:9/16;max-height:340px;border-radius:10px;border:1px dashed var(--line);
+    display:flex;align-items:center;justify-content:center;text-align:center;
+    color:var(--muted);font-size:13px;padding:16px;margin-bottom:16px;background:#101318;
+  }
+  .case video{width:100%;border-radius:10px;margin-bottom:16px;background:#000}
+  dl{margin:0}
+  dt{font-weight:600;margin-top:12px}
+  dd{margin:2px 0 0;color:var(--muted);font-size:15px}
+
+  table{width:100%;border-collapse:collapse;margin-top:20px;font-size:15px}
+  th,td{text-align:left;padding:12px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+  th{color:var(--muted);font-weight:600;font-size:13px;text-transform:uppercase;letter-spacing:.8px}
+  td b{color:var(--fg)}
+  .price{color:var(--accent);font-weight:700;white-space:nowrap}
+
+  ol.steps{list-style:none;counter-reset:s;padding:0;margin:24px 0 0;display:grid;gap:14px}
+  ol.steps li{counter-increment:s;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 18px 16px 56px;position:relative}
+  ol.steps li::before{
+    content:counter(s);position:absolute;left:18px;top:16px;width:26px;height:26px;border-radius:50%;
+    background:var(--accent);color:#12100e;font-weight:700;font-size:14px;display:flex;align-items:center;justify-content:center;
+  }
+  ol.steps b{display:block;margin-bottom:2px}
+  ol.steps span{color:var(--muted);font-size:15px}
+
+  footer{padding:48px 0 64px;color:var(--muted);font-size:14px}
+  footer a{color:var(--accent);text-decoration:none}
+  .note{font-size:13px;color:var(--muted);border-left:2px solid var(--line);padding-left:14px;margin-top:22px}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <nav>
+      <div class="brand">Rekam<span>Rasa</span> Studio</div>
+      <ul>
+        <li><a href="#karya">Karya</a></li>
+        <li><a href="#layanan">Layanan</a></li>
+        <li><a href="#proses">Proses</a></li>
+        <li><a href="#tentang">Tentang</a></li>
+        <li><a href="#kontak">Kontak</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<section id="hero">
+  <div class="wrap">
+    <div class="kicker">Video produk UMKM · TikTok · Reels · Shorts</div>
+    <h1>Produkmu sudah bagus.<br>Biar videonya yang membuktikan.</h1>
+    <p class="lead">Saya membantu UMKM kuliner dan fashion lokal mengubah rekaman sederhana menjadi video promosi yang berhenti ditonton di 3 detik pertama — dari brief sampai siap tayang dalam 5–7 hari kerja.</p>
+    <div class="btns">
+      <a class="btn primary" href="#karya">Lihat Karya</a>
+      <a class="btn ghost" href="#kontak">Diskusi Proyek</a>
+    </div>
+    <p class="note">Harga pemula Rp 150.000–350.000 per paket. Tidak menjanjikan viral — yang saya jamin proses dan tenggatnya.</p>
+  </div>
+</section>
+
+<section id="karya">
+  <div class="wrap">
+    <div class="kicker">Karya</div>
+    <h2>Tiga studi kasus</h2>
+    <p class="lead">Setiap karya disajikan sebagai masalah–solusi–pelajaran, bukan sekadar hasil akhir. Semua masih berstatus <b>proyek latihan</b>, dan saya menyebutkannya terbuka.</p>
+
+    <div class="grid">
+
+      <article class="card case">
+        <div class="frame">Klip sebelum–sesudah<br>(video menyusul)</div>
+        <div class="tag">F&amp;B · 30 detik</div>
+        <h3>Kopi susu UMKM</h3>
+        <p><b>Masalah:</b> rekaman malam hari, gelap, audio ramai, tidak ada daya tarik di awal.</p>
+        <p><b>Solusi:</b> hook es dituang di 3 detik pertama, eksposur dan suhu warna dinaikkan, audio diganti musik dan SFX tuang, harga muncul di detik ke-8.</p>
+        <p><b>Pelajaran:</b> gerakan fisik mengalahkan teks pembuka.</p>
+      </article>
+
+      <article class="card case">
+        <div class="frame">Klip sebelum–sesudah<br>(video menyusul)</div>
+        <div class="tag">Skincare · 9:16</div>
+        <h3>Skincare rumahan</h3>
+        <p><b>Masalah:</b> video vertikal dan horizontal bercampur, cahaya tidak konsisten.</p>
+        <p><b>Solusi:</b> rasio disamakan ke 9:16, warna diseragamkan dengan satu LUT, urutan disusun <i>problem – pemakaian – hasil</i>.</p>
+        <p><b>Pelajaran:</b> konsistensi warna lebih menentukan kesan profesional daripada efek.</p>
+      </article>
+
+      <article class="card case">
+        <div class="frame">4 klip turunan<br>(video menyusul)</div>
+        <div class="tag">Fashion · Repurposing</div>
+        <h3>Fashion lokal</h3>
+        <p><b>Masalah:</b> satu video 90 detik terlalu panjang untuk Reels/Shorts, hanya bisa diunggah sekali.</p>
+        <p><b>Solusi:</b> dipotong menjadi 4 klip 15–25 detik — detail bahan, cara pakai, harga, testimoni — masing-masing punya hook sendiri.</p>
+        <p><b>Pelajaran:</b> satu produksi menjadi empat aset unggahan.</p>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<section id="layanan">
+  <div class="wrap">
+    <div class="kicker">Layanan &amp; Harga</div>
+    <h2>Tiga paket, tanpa biaya tersembunyi</h2>
+    <p class="lead">Harga pemula, berlaku sampai 5 klien pertama. Revisi di luar batas paket dihitung Rp 25.000 per putaran.</p>
+
+    <table>
+      <thead>
+        <tr><th>Paket</th><th>Isi</th><th>Revisi</th><th>Harga</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><b>Starter</b></td>
+          <td>1 video 20–30 detik, naskah singkat, musik, teks</td>
+          <td>1× minor</td>
+          <td class="price">Rp 150.000</td>
+        </tr>
+        <tr>
+          <td><b>Growth</b></td>
+          <td>3 video + 1 klip turunan, naskah, penyesuaian warna</td>
+          <td>2× minor</td>
+          <td class="price">Rp 250.000</td>
+        </tr>
+        <tr>
+          <td><b>Retainer</b></td>
+          <td>6 video/bulan (2 per pekan), prioritas jadwal</td>
+          <td>2× minor per video</td>
+          <td class="price">Rp 350.000/bln</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p class="note">Tenggat dipercepat setengah dari normal dikenakan tambahan 30%. Klien baru: DP 50%, berkas final dikirim setelah pelunasan.</p>
+  </div>
+</section>
+
+<section id="proses">
+  <div class="wrap">
+    <div class="kicker">Proses Kerja</div>
+    <h2>Empat tahap, 5–7 hari kerja</h2>
+
+    <ol class="steps">
+      <li><b>Brief</b><span>Formulir singkat: produk, keunggulan, target audiens, tenggat, referensi.</span></li>
+      <li><b>Naskah</b><span>Menyusun hook, alur, dan CTA. Ruang lingkup serta harga dikonfirmasi tertulis.</span></li>
+      <li><b>Edit</b><span>Penyuntingan, teks, musik, warna, audio, plus klip turunan bila paketnya mencakup.</span></li>
+      <li><b>Kirim</b><span>Berkas final 9:16 dan 1:1, arsip materi, satu putaran revisi sesuai paket.</span></li>
+    </ol>
+  </div>
+</section>
+
+<section id="tentang">
+  <div class="wrap">
+    <div class="kicker">Tentang</div>
+    <h2>Reno Oktavian Chandra Hadi</h2>
+    <p class="lead">Mahasiswa S1 Informatika Universitas AMIKOM Yogyakarta. Mengerjakan editing video promosi produk untuk UMKM di sekitar Yogyakarta.</p>
+
+    <dl>
+      <dt>Yang saya kerjakan</dt>
+      <dd>Editing short-form: potong, ritme, jump cut, beat sync, teks dan tipografi video, color grading dan sound design dasar, serta repurposing satu video menjadi beberapa klip.</dd>
+
+      <dt>Alat</dt>
+      <dd>CapCut (utama), Premiere Pro (dasar), Canva, Google Sheets untuk pencatatan biaya dan jam kerja.</dd>
+
+      <dt>Tingkat keahlian (jujur)</dt>
+      <dd>Editing short-form: menengah. Naskah dan pengambilan gambar: pemula–menengah. Saya tidak menulis "mahir" karena belum pernah menangani klien besar.</dd>
+
+      <dt>Yang belum saya kerjakan</dt>
+      <dd>Motion graphics kompleks, VFX, dan produksi tim. Untuk kebutuhan itu saya menyatakan belum sanggup, bukan menerima lalu mengecewakan.</dd>
+
+      <dt>Batas yang saya jaga</dt>
+      <dd>Maksimal 2 video per pekan. Saat pekan ujian turun menjadi 1 video dan klien baru tidak diambil — kuliah tetap prioritas.</dd>
+    </dl>
+  </div>
+</section>
+
+<section id="kontak">
+  <div class="wrap">
+    <div class="kicker">Kontak</div>
+    <h2>Ceritakan produkmu</h2>
+    <p class="lead">Kirim tiga hal: produk apa, siapa pembelinya, dan kapan videonya ingin tayang. Saya balas dalam ≤ 4 jam pada jam wajar.</p>
+    <div class="btns">
+      <a class="btn primary" href="mailto:23.11.5811@students.amikom.ac.id?subject=Brief%20video%20produk">Kirim brief lewat email</a>
+      <a class="btn ghost" href="#hero">Kembali ke atas</a>
+    </div>
+    <p class="note">Nomor WhatsApp diberikan setelah diskusi awal, agar tidak terkena pesan spam.</p>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>© <span id="y">2026</span> Rekam Rasa Studio — Reno Oktavian Chandra Hadi · Yogyakarta</p>
+    <p>Semua karya di halaman ini adalah proyek latihan, bukan pekerjaan klien berbayar.</p>
+  </div>
+</footer>
+
+<script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+</body>
+</html>
